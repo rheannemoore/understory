@@ -1,0 +1,103 @@
+
+:root {
+  --cream: #f5eedc;
+  --paper: #f9f4e6;
+  --ink: #3d4a3c;
+  --ink-soft: #5d6b5b;
+  --verd: #9db8a4;
+  --rose: #e8b9bb;
+  --yel: #efd98f;
+  --lil: #c9b9dc;
+  --rust: #b8693f;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--cream);
+  background-image: radial-gradient(ellipse at 20% 0%, #fbf6e8 0%, transparent 60%),
+                    radial-gradient(ellipse at 90% 100%, #efe6cd 0%, transparent 55%);
+  color: var(--ink);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1.65;
+}
+h1, h2 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; line-height: 1.12; margin: 0 0 .5em; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+h2 { font-size: 1.7rem; }
+a { color: inherit; }
+.site-header {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: .75rem 2rem; max-width: 1050px; margin: 0 auto; padding: 1.5rem 1.25rem 0;
+}
+.wordmark {
+  font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.6rem; font-weight: 500;
+  text-decoration: none; letter-spacing: .02em;
+}
+.wordmark span { font-style: italic; color: var(--ink-soft); }
+nav a {
+  text-decoration: none; margin-left: 1.5rem; font-size: .95rem; letter-spacing: .14em;
+  text-transform: uppercase; padding-bottom: 2px; border-bottom: 1px solid transparent;
+}
+nav a:hover, nav a[aria-current] { border-bottom-color: var(--ink); }
+main { max-width: 1050px; margin: 0 auto; padding: 0 1.25rem; }
+.hero {
+  display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center;
+  padding: 3rem 0 1rem;
+}
+.hero-flip { grid-template-columns: .85fr 1.15fr; }
+.eyebrow { font-size: .9rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 1rem; }
+.lead { font-size: 1.3rem; max-width: 34rem; }
+.button {
+  display: inline-block; padding: .7rem 1.6rem; border: 1px solid var(--ink);
+  text-decoration: none; letter-spacing: .12em; text-transform: uppercase; font-size: .9rem;
+  background: transparent; transition: background .2s;
+}
+.button:hover, .button:focus-visible { background: var(--yel); }
+.soon, .tag {
+  display: inline-block; font-size: .85rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ink-soft); border: 1px dashed var(--ink-soft); padding: .25rem .8rem; margin: .5rem 0 0;
+}
+.folio {
+  margin: 0; padding: 1.1rem 1.1rem .8rem; background: var(--paper);
+  border: 1px solid rgba(61,74,60,.45); outline: 1px solid rgba(61,74,60,.25); outline-offset: 5px;
+  box-shadow: 0 1px 0 rgba(61,74,60,.06);
+}
+.folio svg { display: block; width: 100%; height: auto; }
+.folio figcaption {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: .1rem .8rem;
+  margin-top: .6rem; padding-top: .5rem; border-top: 1px solid rgba(61,74,60,.3);
+  font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft);
+}
+.folio .latin { font-style: italic; text-transform: none; letter-spacing: .02em; font-size: .95rem; }
+.divider { display: flex; align-items: center; gap: 1rem; margin: 2.5rem 0; }
+.divider .line { flex: 1; height: 1px; background: rgba(61,74,60,.35); }
+.divider .mark svg { display: block; width: 46px; height: 46px; }
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.duo { grid-template-columns: repeat(2, 1fr); max-width: 700px; margin: 0 auto; }
+.card {
+  display: block; text-decoration: none; padding: 1.6rem 1.4rem 1.4rem; background: var(--paper);
+  border: 1px solid rgba(61,74,60,.4); text-align: center; transition: transform .2s, border-color .2s;
+}
+a.card:hover, a.card:focus-visible { transform: translateY(-3px); border-color: var(--ink); }
+.card-mark svg { width: 84px; height: 84px; margin-bottom: .6rem; }
+.card p { margin: 0; color: var(--ink-soft); font-size: 1.1rem; }
+.card.ghost { opacity: .85; border-style: dashed; }
+.card.ghost .tag { margin-top: .3rem; }
+.offerings { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.offer { padding: 1.5rem; background: var(--paper); border: 1px solid rgba(61,74,60,.4); }
+.offer .meta { color: var(--ink-soft); letter-spacing: .08em; margin: 0 0 .6rem; }
+.book { text-align: center; margin: 2.5rem 0 1rem; }
+.note { color: var(--ink-soft); font-style: italic; font-size: 1rem; }
+.prose { max-width: 38rem; margin: 0 auto 3rem; }
+.prose h2 { margin-top: 1.5rem; }
+.site-footer { max-width: 1050px; margin: 3rem auto 0; padding: 0 1.25rem 2.5rem; text-align: center; color: var(--ink-soft); font-size: .95rem; letter-spacing: .08em; }
+.site-footer .divider { margin: 0 0 1.2rem; }
+.site-footer p { margin: 0; }
+@media (max-width: 760px) {
+  .hero, .hero-flip { grid-template-columns: 1fr; gap: 2rem; padding-top: 2rem; }
+  .hero-flip .folio { order: 2; }
+  .trio, .duo, .offerings { grid-template-columns: 1fr; }
+  .folio { max-width: 380px; margin: 0 auto; }
+  nav a { margin: 0 1rem 0 0; }
+}
